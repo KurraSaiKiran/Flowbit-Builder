@@ -1,0 +1,15 @@
+/* =========================================================
+   FlowBuilder.module.css
+   Layout for the main flow canvas component.
+   ========================================================= */
+
+/* ── Full-height canvas wrapper ─────────────────────────── */
+.canvasWrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: var(--color-canvas-bg);
+}
+
+/* ── Controls (zoom/fit) positioning ────────────────────── */
+/* React Flow controls are already positioned internally. */

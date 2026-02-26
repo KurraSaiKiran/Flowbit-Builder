@@ -1,0 +1,111 @@
+/* =========================================================
+   SettingsPanel.module.css
+   Styles for the node-editing sidebar shown when a node is selected.
+   ========================================================= */
+
+/* ── Panel container ───────────────────────────────────── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-panel-bg);
+}
+
+/* ── Panel header bar ──────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  min-height: 48px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.backButton:hover {
+  background: rgba(248, 250, 252, 0.95);
+  color: var(--color-text-primary);
+  transform: translateX(-2px);
+}
+
+.headerTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  flex: 1;
+  text-align: center;
+}
+
+/* ── Body / form area ──────────────────────────────────── */
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* ── Field section ─────────────────────────────────────── */
+.section {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  transition: all 0.3s ease;
+  outline: none;
+  line-height: 1.5;
+}
+
+.textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ── Hint ──────────────────────────────────────────────── */
+.hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  line-height: 1.4;
+}

@@ -1,0 +1,87 @@
+/* =========================================================
+   NodesPanel.module.css
+   Styles for the right sidebar panel that lists draggable node types.
+   ========================================================= */
+
+/* ── Panel container ───────────────────────────────────── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-panel-bg);
+}
+
+/* ── Panel header ──────────────────────────────────────── */
+.header {
+  padding: var(--space-4) var(--space-4) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* ── Grid of node type cards ───────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-4);
+  overflow-y: auto;
+}
+
+/* ── Individual node type card ─────────────────────────── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-3);
+  border: 1.5px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  background: rgba(238, 242, 255, 0.6);
+  backdrop-filter: blur(8px);
+  cursor: grab;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(224, 231, 255, 0.8);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card:active {
+  cursor: grabbing;
+  transform: scale(0.97);
+}
+
+.cardIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.cardLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.cardDescription {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-align: center;
+  line-height: 1.4;
+}
