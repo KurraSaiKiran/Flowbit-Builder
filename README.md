@@ -77,10 +77,6 @@ src/
 - **JSON Export** - Save flow structure for later use
 - **PNG Export** - Generate visual representation of the flow
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-
 ## 📄 License
 
 MIT License - feel free to use this project for personal or commercial purposes.
